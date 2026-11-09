@@ -1,11 +1,14 @@
 # 🌐 Enterprise Stealth Browser Mesh
 
+[![CI](https://github.com/Amz34/stealth-browser-mesh/actions/workflows/ci.yml/badge.svg)](https://github.com/Amz34/stealth-browser-mesh/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Engine: Lightpanda](https://img.shields.io/badge/Engine-Lightpanda_(Zig)-orange.svg)](https://lightpanda.io)
 [![Engine: Nodriver CDP](https://img.shields.io/badge/Anti--Bot-Nodriver_CDP-green.svg)](https://github.com/ultrafunkamsterdam/nodriver)
 [![Protocol: FastMCP](https://img.shields.io/badge/Protocol-Model_Context_Protocol-purple.svg)](https://modelcontextprotocol.io)
 
 An enterprise-grade hybrid browser mesh engineered for AI agents, swarms, and high-throughput LLM pipelines. Combines sub-millisecond, low-memory DOM extraction with undetectable Chrome DevTools Protocol automation to navigate Cloudflare walls, Turnstile challenges, and complex SPAs.
+
+![Enterprise Stealth Browser Mesh Architecture](assets/stealth-browser-mesh-overview.jpg)
 
 ---
 
@@ -40,17 +43,42 @@ An enterprise-grade hybrid browser mesh engineered for AI agents, swarms, and hi
 
 ```bash
 # Instant sub-millisecond markdown extraction via Lightpanda
-browser-mesh https://example.com
+python3 engine.py https://example.com
 
-# Direct tool invocation
-lightpanda-core fetch https://news.ycombinator.com --dump markdown
+# Dump HTML or semantic trees
+python3 engine.py https://example.com --format html
 
-# FastMCP Server launch
+# Run via stealth engine
+python3 engine.py https://example.com --engine stealth --selector "#content"
+
+# Launch MCP server
 python3 mcp/server.py
 ```
 
 ---
 
+## 🧪 Testing & Verification
+
+![Continuous Integration & Automated Testing](assets/github-benefits-cicd.jpg)
+
+Run the test suite and verify syntax:
+
+```bash
+# Run unit tests
+make test
+
+# Verify syntax across all modules
+make lint
+```
+
+---
+
+## 🔗 Ecosystem
+
+Part of the **[Awesome Agent Infrastructure](https://github.com/Amz34/awesome-agent-infrastructure)** curated catalogue of production-grade agent tools, scrapers, and orchestration runtimes.
+
+---
+
 ## 🛡️ License
-Licensed under **MIT**. Engineered by **[Aamir Zameer (Amz34)](https://github.com/Amz34)**  
-*Principal AI Architect & Enterprise Forward Deployed Engineer*
+
+Licensed under **MIT**. Engineered by **[Aamir Zameer (Amz34)](https://github.com/Amz34)**.
